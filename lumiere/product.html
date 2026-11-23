@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product — Lumière</title>
+  <script>
+    (function () {
+      var t = null;
+      try { t = JSON.parse(localStorage.getItem('lum_theme')); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="product">
+
+<main id="main">
+  <div class="container">
+
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><i>/</i><a id="crumbCat" href="shop.html">Shop</a><i>/</i><span id="crumbCur"></span>
+    </nav>
+
+    <section class="pdp">
+      <div class="gallery-pdp">
+        <div class="thumbs" id="thumbs"></div>
+        <div class="gallery-main"><span class="media" id="mainImg"></span></div>
+      </div>
+
+      <div class="pdp-info">
+        <a class="pdp-brand" id="pBrand" href="#"></a>
+        <h1 id="pTitle"></h1>
+        <div class="pdp-rate" id="pRate"></div>
+        <div class="pdp-price" id="pPrice"></div>
+        <p id="pDesc"></p>
+        <ul class="feats" id="pFeats"></ul>
+
+        <div class="buy">
+          <div class="qty" role="group" aria-label="Quantity">
+            <button type="button" data-act="dec" aria-label="Decrease quantity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+            <span aria-live="polite">1</span>
+            <button type="button" data-act="inc" aria-label="Increase quantity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+          <button class="btn" id="addBtn" type="button">Add to bag</button>
+          <button class="wish-btn" type="button" aria-label="Save to wishlist"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg></button>
+        </div>
+
+        <div class="assure">
+          <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>Free shipping over $50</div>
+          <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>14-day returns</div>
+          <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Secure payment</div>
+        </div>
+        <div class="meta" id="pMeta"></div>
+      </div>
+    </section>
+
+    <section class="pdp-tabs">
+      <div class="tab-list" role="tablist">
+        <button class="is-active" data-tab="tabDesc" role="tab">Description</button>
+        <button data-tab="tabIng" role="tab">Details</button>
+        <button data-tab="tabRev" role="tab">Reviews</button>
+      </div>
+      <div class="tab-panel is-active" id="tabDesc" role="tabpanel"></div>
+      <div class="tab-panel" id="tabIng" role="tabpanel"></div>
+      <div class="tab-panel" id="tabRev" role="tabpanel"></div>
+    </section>
+
+    <section class="section" aria-labelledby="h-rel">
+      <div class="section-head"><h2 id="h-rel">You may also like</h2></div>
+      <div class="grid" id="related"></div>
+    </section>
+
+  </div>
+</main>
+
+<script src="js/jquery.js"></script>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

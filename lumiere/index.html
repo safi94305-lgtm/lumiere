@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumière — Beauty, Fashion & Lifestyle</title>
+  <meta name="description" content="Beauty, fashion and everyday essentials, chosen with care.">
+  <script>
+    /* Apply saved theme (or the system preference) before first paint to avoid a flash */
+    (function () {
+      var t = null;
+      try {t = JSON.parse(localStorage.getItem('lum_theme'));} catch (e) { }
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="home">
+
+  <main id="main">
+    <div class="container">
+
+      <!-- Hero -->
+      <section class="hero" aria-roledescription="carousel" aria-label="Featured collections">
+        <div class="hero-slide">
+          <div class="hero-copy">
+            <span class="hero-tag">New collection</span>
+            <h1>Your beauty, your style</h1>
+            <p>Discover the best products for a more beautiful you.</p>
+            <a class="btn" href="shop.html?cat=beauty">Shop now</a>
+          </div>
+          <span class="media"><img src="./images/Effortlessly Chic💖.jpg" data-src="images/hero-1.jpg"
+              alt="Woman holding pink flowers"></span>
+        </div>
+        <div class="hero-slide" aria-hidden="true">
+          <div class="hero-copy">
+            <span class="hero-tag">Skincare essentials</span>
+            <h1>Healthy skin, every day</h1>
+            <p>Cleansers, serums and moisturisers up to 50% off this season.</p>
+            <a class="btn" href="shop.html?cat=skincare">Shop skincare</a>
+          </div>
+          <span class="media"><img src="./images/The Dewy Skin Edit ✨.jpg" data-src="images/hero-2.jpg"
+              alt="Skincare products on a pink surface"></span>
+        </div>
+        <div class="hero-slide" aria-hidden="true">
+          <div class="hero-copy">
+            <span class="hero-tag">New arrivals</span>
+            <h1>Fashion for every season</h1>
+            <p>Soft tones and clean lines, from coats to everyday bags.</p>
+            <a class="btn" href="shop.html?cat=fashion">Shop fashion</a>
+          </div>
+          <span class="media"><img src="./images/follow for more.jpg" data-src="images/hero-3.jpg"
+              alt="Woman in a pink dress with a handbag"></span>
+        </div>
+        <button class="hero-nav prev" aria-label="Previous slide"><svg width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6" />
+          </svg></button>
+        <button class="hero-nav next" aria-label="Next slide"><svg width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6" />
+          </svg></button>
+        <div class="hero-dots"></div>
+      </section>
+
+      <!-- Perks -->
+      <section class="perks" aria-label="Store benefits">
+        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z" />
+              <circle cx="5.5" cy="18.5" r="2" />
+              <circle cx="18.5" cy="18.5" r="2" />
+            </svg></span>
+          <div><b>Free shipping</b><span>On orders over $50</span></div>
+        </div>
+        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+              <path d="M3 3v5h5" />
+            </svg></span>
+          <div><b>Easy returns</b><span>Within 14 days</span></div>
+        </div>
+        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg></span>
+          <div><b>Secure payment</b><span>100% safe and secure</span></div>
+        </div>
+        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 14v-2a9 9 0 0 1 18 0v2" />
+              <path d="M21 15a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2z" />
+            </svg></span>
+          <div><b>24/7 support</b><span>We are here to help</span></div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="section" aria-labelledby="h-cat">
+        <div class="section-head">
+          <h2 id="h-cat">Shop by category</h2><a class="link-more" href="shop.html?cat=all">View all</a>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-card" href="shop.html?cat=skincare"><span class="media r-45"><img src="images/cat-skincare.jpg"
+                data-src="images/cat-skincare.jpg" alt="Skincare" loading="lazy"></span>
+            <div><b>Skincare</b><span>Shop now</span></div>
+          </a>
+          <a class="cat-card" href="shop.html?cat=makeup"><span class="media r-45"><img src="images/cat-makeup.jpg"
+                data-src="images/cat-makeup.jpg" alt="Makeup" loading="lazy"></span>
+            <div><b>Makeup</b><span>Shop now</span></div>
+          </a>
+          <a class="cat-card" href="shop.html?cat=fashion"><span class="media r-45"><img src="images/cat-fashion.jpg"
+                data-src="images/cat-fashion.jpg" alt="Fashion" loading="lazy"></span>
+            <div><b>Fashion</b><span>Shop now</span></div>
+          </a>
+          <a class="cat-card" href="shop.html?cat=electronics"><span class="media r-45"><img
+                src="images/cat-electronics.jpg" data-src="images/cat-electronics.jpg" alt="Electronics"
+                loading="lazy"></span>
+            <div><b>Electronics</b><span>Shop now</span></div>
+          </a>
+          <a class="cat-card" href="shop.html?cat=home"><span class="media r-45"><img src="images/cat-home.jpg"
+                data-src="images/cat-home.jpg" alt="Home and living" loading="lazy"></span>
+            <div><b>Home &amp; Living</b><span>Shop now</span></div>
+          </a>
+          <a class="cat-card" href="shop.html?cat=accessories"><span class="media r-45"><img
+                src="images/cat-accessories.jpg" data-src="images/cat-accessories.jpg" alt="Accessories"
+                loading="lazy"></span>
+            <div><b>Accessories</b><span>Shop now</span></div>
+          </a>
+        </div>
+
+        <div class="promos">
+          <a class="promo" href="shop.html?cat=offers">
+            <div class="promo-copy">
+              <h3>Up to 50% off skincare essentials</h3><span class="btn btn-sm btn-ghost">Shop now</span>
+            </div><span class="media"><img src="./images/865465253417822312.jpg" data-src="images/promo-1.jpg" alt=""
+                loading="lazy"></span>
+          </a>
+          <a class="promo" href="shop.html?cat=fashion">
+            <div class="promo-copy">
+              <h3>New arrivals, fashion collection</h3><span class="btn btn-sm btn-ghost">Shop now</span>
+            </div><span class="media"><img src="./images/Fall Fashion Amazon Finds 2026.jpg" data-src="images/promo-2.jpg" alt=""
+                loading="lazy"></span>
+          </a>
+          <a class="promo" href="shop.html?cat=electronics">
+            <div class="promo-copy">
+              <h3>Tech for a better you</h3><span class="btn btn-sm btn-ghost">Shop now</span>
+            </div><span class="media"><img src="./images/Beats Solo 4 Wireless Bluetooth Headphones _ 50-Hour Battery, Apple & Android Compatible.jpg" data-src="images/promo-3.jpg" alt=""
+                loading="lazy"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Best sellers -->
+      <section class="section" aria-labelledby="h-best">
+        <div class="section-head">
+          <div>
+            <h2 id="h-best">Best sellers</h2>
+          </div>
+          <div class="carousel-ctrl">
+            <button class="prev" aria-label="Scroll left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+              </svg></button>
+            <button class="next" aria-label="Scroll right"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg></button>
+          </div>
+        </div>
+        <div class="tabs" id="bestTabs" style="margin-bottom:20px"></div>
+        <div class="rail" id="bestRail"></div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section" aria-labelledby="h-testi">
+        <div class="section-head">
+          <h2 id="h-testi">What customers say</h2>
+        </div>
+        <div class="testi">
+          <figure><span class="stars" style="--r:5" role="img" aria-label="5 out of 5"></span>
+            <blockquote>“My skin has never felt this calm. The routine I picked here took two weeks to show results.”
+            </blockquote>
+            <figcaption><span class="media"><img src="images/avatar-1.jpg" data-src="images/avatar-1.jpg" alt=""
+                  loading="lazy"></span>
+              <div><b>Sara M.</b><span>Verified buyer</span></div>
+            </figcaption>
+          </figure>
+          <figure><span class="stars" style="--r:5" role="img" aria-label="5 out of 5"></span>
+            <blockquote>“Fast delivery, careful packaging, and the coat looks even better than the photos.”</blockquote>
+            <figcaption><span class="media"><img src="images/avatar-2.jpg" data-src="images/avatar-2.jpg" alt=""
+                  loading="lazy"></span>
+              <div><b>Layla K.</b><span>Verified buyer</span></div>
+            </figcaption>
+          </figure>
+          <figure><span class="stars" style="--r:4.5" role="img" aria-label="4.5 out of 5"></span>
+            <blockquote>“I returned one item and the refund arrived in three days. Easy from start to finish.”
+            </blockquote>
+            <figcaption><span class="media"><img src="images/avatar-3.jpg" data-src="images/avatar-3.jpg" alt=""
+                  loading="lazy"></span>
+              <div><b>Noor A.</b><span>Verified buyer</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="newsletter" aria-labelledby="h-nl">
+        <div class="newsletter-copy">
+          <h2 id="h-nl">Join our newsletter</h2>
+          <p>Get updates on new products and special offers.</p>
+          <form class="nl-form" id="nlForm" novalidate>
+            <label class="sr-only" for="nlEmail">Email address</label>
+            <input id="nlEmail" type="email" placeholder="Enter your email address" autocomplete="email">
+            <button class="btn btn-sm" type="submit">Subscribe</button>
+          </form>
+          <p class="nl-msg" role="status"></p>
+        </div>
+        <span class="media"><img src="images/newsletter.jpg" data-src="images/newsletter.jpg" alt=""
+            loading="lazy"></span>
+      </section>
+
+      <!-- Gallery -->
+      <section class="section" aria-label="Gallery">
+        <div class="gallery">
+          <span class="media"><img src="images/gallery-1.jpg" data-src="images/gallery-1.jpg" alt=""
+              loading="lazy"></span>
+          <span class="media"><img src="images/gallery-2.jpg" data-src="images/gallery-2.jpg" alt=""
+              loading="lazy"></span>
+          <span class="media"><img src="images/gallery-3.jpg" data-src="images/gallery-3.jpg" alt=""
+              loading="lazy"></span>
+          <span class="media"><img src="images/gallery-4.jpg" data-src="images/gallery-4.jpg" alt=""
+              loading="lazy"></span>
+          <div class="gallery-note">
+            <h3>More than just a store</h3>
+            <p>Beauty, fashion and home, in one soft-toned place.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
