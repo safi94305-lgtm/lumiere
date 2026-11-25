@@ -1,258 +1,166 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lumière — Beauty, Fashion & Lifestyle</title>
-  <meta name="description" content="Beauty, fashion and everyday essentials, chosen with care.">
-  <script>
-    /* Apply saved theme (or the system preference) before first paint to avoid a flash */
-    (function () {
-      var t = null;
-      try {t = JSON.parse(localStorage.getItem('lum_theme'));} catch (e) { }
-      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="SquadFolio verifies practical skills, forms five-role product squads, and records each member's contribution.">
+  <title>SquadFolio — Show what you can do</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body data-page="home">
-
-  <main id="main">
-    <div class="container">
-
-      <!-- Hero -->
-      <section class="hero" aria-roledescription="carousel" aria-label="Featured collections">
-        <div class="hero-slide">
-          <div class="hero-copy">
-            <span class="hero-tag">New collection</span>
-            <h1>Your beauty, your style</h1>
-            <p>Discover the best products for a more beautiful you.</p>
-            <a class="btn" href="shop.html?cat=beauty">Shop now</a>
-          </div>
-          <span class="media"><img src="./images/Effortlessly Chic💖.jpg" data-src="images/hero-1.jpg"
-              alt="Woman holding pink flowers"></span>
-        </div>
-        <div class="hero-slide" aria-hidden="true">
-          <div class="hero-copy">
-            <span class="hero-tag">Skincare essentials</span>
-            <h1>Healthy skin, every day</h1>
-            <p>Cleansers, serums and moisturisers up to 50% off this season.</p>
-            <a class="btn" href="shop.html?cat=skincare">Shop skincare</a>
-          </div>
-          <span class="media"><img src="./images/The Dewy Skin Edit ✨.jpg" data-src="images/hero-2.jpg"
-              alt="Skincare products on a pink surface"></span>
-        </div>
-        <div class="hero-slide" aria-hidden="true">
-          <div class="hero-copy">
-            <span class="hero-tag">New arrivals</span>
-            <h1>Fashion for every season</h1>
-            <p>Soft tones and clean lines, from coats to everyday bags.</p>
-            <a class="btn" href="shop.html?cat=fashion">Shop fashion</a>
-          </div>
-          <span class="media"><img src="./images/follow for more.jpg" data-src="images/hero-3.jpg"
-              alt="Woman in a pink dress with a handbag"></span>
-        </div>
-        <button class="hero-nav prev" aria-label="Previous slide"><svg width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m15 18-6-6 6-6" />
-          </svg></button>
-        <button class="hero-nav next" aria-label="Next slide"><svg width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m9 18 6-6-6-6" />
-          </svg></button>
-        <div class="hero-dots"></div>
-      </section>
-
-      <!-- Perks -->
-      <section class="perks" aria-label="Store benefits">
-        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z" />
-              <circle cx="5.5" cy="18.5" r="2" />
-              <circle cx="18.5" cy="18.5" r="2" />
-            </svg></span>
-          <div><b>Free shipping</b><span>On orders over $50</span></div>
-        </div>
-        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
-              <path d="M3 3v5h5" />
-            </svg></span>
-          <div><b>Easy returns</b><span>Within 14 days</span></div>
-        </div>
-        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <path d="m9 12 2 2 4-4" />
-            </svg></span>
-          <div><b>Secure payment</b><span>100% safe and secure</span></div>
-        </div>
-        <div class="perk"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 14v-2a9 9 0 0 1 18 0v2" />
-              <path d="M21 15a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2z" />
-            </svg></span>
-          <div><b>24/7 support</b><span>We are here to help</span></div>
-        </div>
-      </section>
-
-      <!-- Categories -->
-      <section class="section" aria-labelledby="h-cat">
-        <div class="section-head">
-          <h2 id="h-cat">Shop by category</h2><a class="link-more" href="shop.html?cat=all">View all</a>
-        </div>
-        <div class="cat-grid">
-          <a class="cat-card" href="shop.html?cat=skincare"><span class="media r-45"><img src="images/cat-skincare.jpg"
-                data-src="images/cat-skincare.jpg" alt="Skincare" loading="lazy"></span>
-            <div><b>Skincare</b><span>Shop now</span></div>
-          </a>
-          <a class="cat-card" href="shop.html?cat=makeup"><span class="media r-45"><img src="images/cat-makeup.jpg"
-                data-src="images/cat-makeup.jpg" alt="Makeup" loading="lazy"></span>
-            <div><b>Makeup</b><span>Shop now</span></div>
-          </a>
-          <a class="cat-card" href="shop.html?cat=fashion"><span class="media r-45"><img src="images/cat-fashion.jpg"
-                data-src="images/cat-fashion.jpg" alt="Fashion" loading="lazy"></span>
-            <div><b>Fashion</b><span>Shop now</span></div>
-          </a>
-          <a class="cat-card" href="shop.html?cat=electronics"><span class="media r-45"><img
-                src="images/cat-electronics.jpg" data-src="images/cat-electronics.jpg" alt="Electronics"
-                loading="lazy"></span>
-            <div><b>Electronics</b><span>Shop now</span></div>
-          </a>
-          <a class="cat-card" href="shop.html?cat=home"><span class="media r-45"><img src="images/cat-home.jpg"
-                data-src="images/cat-home.jpg" alt="Home and living" loading="lazy"></span>
-            <div><b>Home &amp; Living</b><span>Shop now</span></div>
-          </a>
-          <a class="cat-card" href="shop.html?cat=accessories"><span class="media r-45"><img
-                src="images/cat-accessories.jpg" data-src="images/cat-accessories.jpg" alt="Accessories"
-                loading="lazy"></span>
-            <div><b>Accessories</b><span>Shop now</span></div>
-          </a>
-        </div>
-
-        <div class="promos">
-          <a class="promo" href="shop.html?cat=offers">
-            <div class="promo-copy">
-              <h3>Up to 50% off skincare essentials</h3><span class="btn btn-sm btn-ghost">Shop now</span>
-            </div><span class="media"><img src="./images/865465253417822312.jpg" data-src="images/promo-1.jpg" alt=""
-                loading="lazy"></span>
-          </a>
-          <a class="promo" href="shop.html?cat=fashion">
-            <div class="promo-copy">
-              <h3>New arrivals, fashion collection</h3><span class="btn btn-sm btn-ghost">Shop now</span>
-            </div><span class="media"><img src="./images/Fall Fashion Amazon Finds 2026.jpg" data-src="images/promo-2.jpg" alt=""
-                loading="lazy"></span>
-          </a>
-          <a class="promo" href="shop.html?cat=electronics">
-            <div class="promo-copy">
-              <h3>Tech for a better you</h3><span class="btn btn-sm btn-ghost">Shop now</span>
-            </div><span class="media"><img src="./images/Beats Solo 4 Wireless Bluetooth Headphones _ 50-Hour Battery, Apple & Android Compatible.jpg" data-src="images/promo-3.jpg" alt=""
-                loading="lazy"></span>
-          </a>
-        </div>
-      </section>
-
-      <!-- Best sellers -->
-      <section class="section" aria-labelledby="h-best">
-        <div class="section-head">
-          <div>
-            <h2 id="h-best">Best sellers</h2>
-          </div>
-          <div class="carousel-ctrl">
-            <button class="prev" aria-label="Scroll left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m15 18-6-6 6-6" />
-              </svg></button>
-            <button class="next" aria-label="Scroll right"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m9 18 6-6-6-6" />
-              </svg></button>
-          </div>
-        </div>
-        <div class="tabs" id="bestTabs" style="margin-bottom:20px"></div>
-        <div class="rail" id="bestRail"></div>
-      </section>
-
-      <!-- Testimonials -->
-      <section class="section" aria-labelledby="h-testi">
-        <div class="section-head">
-          <h2 id="h-testi">What customers say</h2>
-        </div>
-        <div class="testi">
-          <figure><span class="stars" style="--r:5" role="img" aria-label="5 out of 5"></span>
-            <blockquote>“My skin has never felt this calm. The routine I picked here took two weeks to show results.”
-            </blockquote>
-            <figcaption><span class="media"><img src="images/avatar-1.jpg" data-src="images/avatar-1.jpg" alt=""
-                  loading="lazy"></span>
-              <div><b>Sara M.</b><span>Verified buyer</span></div>
-            </figcaption>
-          </figure>
-          <figure><span class="stars" style="--r:5" role="img" aria-label="5 out of 5"></span>
-            <blockquote>“Fast delivery, careful packaging, and the coat looks even better than the photos.”</blockquote>
-            <figcaption><span class="media"><img src="images/avatar-2.jpg" data-src="images/avatar-2.jpg" alt=""
-                  loading="lazy"></span>
-              <div><b>Layla K.</b><span>Verified buyer</span></div>
-            </figcaption>
-          </figure>
-          <figure><span class="stars" style="--r:4.5" role="img" aria-label="4.5 out of 5"></span>
-            <blockquote>“I returned one item and the refund arrived in three days. Easy from start to finish.”
-            </blockquote>
-            <figcaption><span class="media"><img src="images/avatar-3.jpg" data-src="images/avatar-3.jpg" alt=""
-                  loading="lazy"></span>
-              <div><b>Noor A.</b><span>Verified buyer</span></div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- Newsletter -->
-      <section class="newsletter" aria-labelledby="h-nl">
-        <div class="newsletter-copy">
-          <h2 id="h-nl">Join our newsletter</h2>
-          <p>Get updates on new products and special offers.</p>
-          <form class="nl-form" id="nlForm" novalidate>
-            <label class="sr-only" for="nlEmail">Email address</label>
-            <input id="nlEmail" type="email" placeholder="Enter your email address" autocomplete="email">
-            <button class="btn btn-sm" type="submit">Subscribe</button>
-          </form>
-          <p class="nl-msg" role="status"></p>
-        </div>
-        <span class="media"><img src="images/newsletter.jpg" data-src="images/newsletter.jpg" alt=""
-            loading="lazy"></span>
-      </section>
-
-      <!-- Gallery -->
-      <section class="section" aria-label="Gallery">
-        <div class="gallery">
-          <span class="media"><img src="images/gallery-1.jpg" data-src="images/gallery-1.jpg" alt=""
-              loading="lazy"></span>
-          <span class="media"><img src="images/gallery-2.jpg" data-src="images/gallery-2.jpg" alt=""
-              loading="lazy"></span>
-          <span class="media"><img src="images/gallery-3.jpg" data-src="images/gallery-3.jpg" alt=""
-              loading="lazy"></span>
-          <span class="media"><img src="images/gallery-4.jpg" data-src="images/gallery-4.jpg" alt=""
-              loading="lazy"></span>
-          <div class="gallery-note">
-            <h3>More than just a store</h3>
-            <p>Beauty, fashion and home, in one soft-toned place.</p>
-          </div>
-        </div>
-      </section>
-
+<body>
+  <header class="site-header" id="top">
+    <div class="container-xl header-inner">
+      <a class="brand-lockup" href="#top" aria-label="SquadFolio home"><img src="assets/wordmark-original.png" alt="SquadFolio" class="brand-wordmark"></a>
+      <div class="header-actions"><a href="#waitlist" class="header-contact" data-en="Get in touch" data-ar="انضم إلينا">Get in touch</a><button class="language-toggle" type="button" aria-label="Switch language">عربي</button><button class="theme-toggle" type="button" aria-label="Switch color theme"><span class="theme-glyph" aria-hidden="true">◐</span><span class="theme-label" data-en="Theme" data-ar="المظهر">Theme</span></button></div>
     </div>
+  </header>
+
+  <main>
+    <section class="hero-wrap container-xl" aria-labelledby="hero-title">
+      <div class="hero-panel">
+        <div class="hero-topline"><span class="micro-tag" data-en="SKILL PROOF / REAL TEAMWORK" data-ar="إثبات المهارة / عمل جماعي حقيقي">SKILL PROOF / REAL TEAMWORK</span><span class="hero-status"><i></i><span data-en="A new kind of portfolio" data-ar="نوع جديد من ملفات الإنجاز">A new kind of portfolio</span></span></div>
+        <div class="hero-content">
+          <h1 id="hero-title"><span data-en="PROVE WHAT" data-ar="أثبت ما">PROVE WHAT</span><span data-en="YOU CAN DO" data-ar="تستطيع فعله">YOU CAN DO</span><span class="hero-third"><img src="assets/mascot-cutout.png" alt="" class="hero-inline-mascot"><span data-en="TOGETHER." data-ar="بالفريق.">TOGETHER.</span></span></h1>
+          <p class="hero-copy" data-en="Verify your skills through practical challenges, build a real product with a five-role squad, and leave with evidence of your own contribution." data-ar="وثّق مهاراتك بتحديات عملية، وابنِ منتجاً حقيقياً مع فريق من خمسة تخصصات، واحتفظ بدليل يوثق مساهمتك أنت.">Verify your skills through practical challenges, build a real product with a five-role squad, and leave with evidence of your own contribution.</p>
+          <form class="waitlist-form" id="waitlist" novalidate>
+            <label class="visually-hidden" for="waitlist-email" data-en="Your email address" data-ar="بريدك الإلكتروني">Your email address</label>
+            <input id="waitlist-email" name="email" type="email" autocomplete="email" placeholder="Your email address" data-placeholder-en="Your email address" data-placeholder-ar="بريدك الإلكتروني" required>
+            <button type="submit" class="waitlist-submit"><span data-en="Join the waitlist" data-ar="انضم إلى قائمة الانتظار">Join the waitlist</span><span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="form-message" id="form-message" aria-live="polite" role="status"></div>
+          <div class="hero-trust"><span data-en="Five disciplines" data-ar="خمسة تخصصات">Five disciplines</span><span class="trust-divider"></span><span data-en="Individual credit" data-ar="إنجاز فردي موثق">Individual credit</span><span class="trust-divider"></span><span data-en="Real project work" data-ar="عمل على مشروع حقيقي">Real project work</span></div>
+        </div>
+        <div class="hero-stage" aria-label="SquadFolio team and contribution record">
+          <div class="chat-bubble bubble-left"><span class="bubble-symbol">✓</span><span><b data-en="Skill verified" data-ar="مهارة موثقة">Skill verified</b><small data-en="Practical challenge passed" data-ar="اجتياز تحدٍ عملي">Practical challenge passed</small></span></div>
+          <div class="chat-bubble bubble-right"><span class="bubble-symbol">↗</span><span><b data-en="Your work, recorded" data-ar="إنجازك مسجل">Your work, recorded</b><small data-en="Evidence stays yours" data-ar="أدلتك محفوظة لك">Evidence stays yours</small></span></div>
+          <img class="hero-mascot" src="assets/mascot-cutout.png" alt="SquadFolio mascot squad" fetchpriority="high">
+          <span class="scroll-hint"><span data-en="SCROLL TO EXPLORE" data-ar="تابع لاستكشاف المنصة">SCROLL TO EXPLORE</span><i>↓</i></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter-band container-xl" id="how">
+      <div class="chapter-label" data-en="A portfolio should show the work" data-ar="ملف الإنجاز يجب أن يُظهر العمل">A portfolio should show the work</div>
+      <h2><span data-en="LESS CLAIMING." data-ar="ادعاءات أقل.">LESS CLAIMING.</span><span data-en="MORE MAKING." data-ar="إنجاز أكثر.">MORE MAKING.</span></h2>
+      <p data-en="SquadFolio bridges the gap between learning on your own and contributing in an engineering team. The proof comes from what you build, how you work, and what your team can review." data-ar="تجسر SquadFolio المسافة بين التعلم الفردي والمساهمة ضمن فريق هندسي. يأتي الإثبات مما تبنيه، وكيف تعمل، وما يستطيع فريقك مراجعته.">SquadFolio bridges the gap between learning on your own and contributing in an engineering team. The proof comes from what you build, how you work, and what your team can review.</p>
+    </section>
+
+    <section class="section-shell container-xl" aria-labelledby="path-title">
+      <div class="section-heading"><div><span class="section-kicker" data-en="THE PATH" data-ar="المسار">THE PATH</span><h2 id="path-title"><span data-en="From a skill claim" data-ar="من ادعاء المهارة">From a skill claim</span><span class="heading-muted" data-en="to a body of work." data-ar="إلى سجل من العمل.">to a body of work.</span></h2></div><p data-en="A clear sequence with a useful outcome at every step. No course treadmill and no automatic team assignment before your skills are verified." data-ar="خطوات واضحة بنتيجة مفيدة في كل مرحلة. لا دورات لا تنتهي ولا انضمام تلقائي لفريق قبل توثيق المهارات.">A clear sequence with a useful outcome at every step. No course treadmill and no automatic team assignment before your skills are verified.</p></div>
+      <div class="path-grid">
+        <article class="path-step"><span class="step-count">01</span><span class="step-glyph">⌕</span><h3 data-en="Choose a discipline" data-ar="اختر تخصصك">Choose a discipline</h3><p data-en="Pick the role and skills you want to demonstrate. Start with a focused challenge tied to practical work." data-ar="اختر الدور والمهارات التي تريد إثباتها، وابدأ بتحدٍ عملي مركز يرتبط بعمل حقيقي.">Pick the role and skills you want to demonstrate. Start with a focused challenge tied to practical work.</p><span class="step-outcome" data-en="A clear skill claim" data-ar="ادعاء مهارة محدد">A clear skill claim</span></article>
+        <article class="path-step"><span class="step-count">02</span><span class="step-glyph">◎</span><h3 data-en="Pass a skill challenge" data-ar="اجتز تحدي المهارة">Pass a skill challenge</h3><p data-en="Submit a solution evaluated for code quality, functionality, and basic security. A score of 80% or more verifies the skill." data-ar="قدّم حلاً يُقيّم من حيث جودة الكود والوظائف والأمان الأساسي. تُوثق المهارة عند تحقيق 80% أو أكثر.">Submit a solution evaluated for code quality, functionality, and basic security. A score of 80% or more verifies the skill.</p><span class="step-outcome" data-en="Verified skill → role queue" data-ar="مهارة موثقة ← طابور التخصص">Verified skill → role queue</span></article>
+        <article class="path-step"><span class="step-count">03</span><span class="step-glyph">⌘</span><h3 data-en="Build as a squad" data-ar="ابنِ ضمن فريق">Build as a squad</h3><p data-en="Join four other verified disciplines to take on an approved product brief and simulate a real engineering workflow." data-ar="انضم لأربعة تخصصات موثقة أخرى للعمل على موجز منتج معتمد ومحاكاة سير عمل هندسي واقعي.">Join four other verified disciplines to take on an approved product brief and simulate a real engineering workflow.</p><span class="step-outcome" data-en="Five roles → active squad" data-ar="خمسة أدوار ← فريق نشط">Five roles → active squad</span></article>
+        <article class="path-step"><span class="step-count">04</span><span class="step-glyph">↗</span><h3 data-en="Keep your contribution record" data-ar="احتفظ بسجل مساهمتك">Keep your contribution record</h3><p data-en="Your own tasks, reviews, evidence, and outputs form an immutable record when the project ends." data-ar="تُجمع مهامك ومراجعاتك وأدلتك ومخرجاتك في سجل فردي ثابت عند انتهاء المشروع.">Your own tasks, reviews, evidence, and outputs form an immutable record when the project ends.</p><span class="step-outcome" data-en="A record you can share" data-ar="سجل يمكنك مشاركته">A record you can share</span></article>
+      </div>
+    </section>
+
+    <section class="feature-panel-wrap container-xl" id="roles">
+      <div class="feature-panel squad-panel">
+        <div class="panel-copy"><span class="section-kicker light-kicker" data-en="THE SQUAD" data-ar="الفريق">THE SQUAD</span><h2><span data-en="Five roles." data-ar="خمسة أدوار.">Five roles.</span><span class="heading-muted-light" data-en="One product." data-ar="منتج واحد.">One product.</span></h2><p data-en="A squad forms only when verified members are ready in all five core MVP roles. Each person can belong to one active squad at a time." data-ar="يتشكل الفريق عند جاهزية أعضاء موثقين في أدوار MVP الخمسة. وينضم كل شخص إلى فريق نشط واحد فقط في الوقت نفسه.">A squad forms only when verified members are ready in all five core MVP roles. Each person can belong to one active squad at a time.</p><div class="queue-rule"><span class="queue-rule-mark">5/5</span><span data-en="All roles present → squad status becomes Active" data-ar="اكتمال الأدوار ← حالة الفريق: نشط">All roles present → squad status becomes Active</span></div></div>
+        <div class="squad-ui" aria-label="Choose a squad role">
+          <div class="ui-bar"><span class="ui-dots"><i></i><i></i><i></i></span><span data-en="SQUAD ROLE QUEUE" data-ar="طابور أدوار الفريق">SQUAD ROLE QUEUE</span><span class="ui-state" data-en="FORMING" data-ar="قيد التشكيل">FORMING</span></div>
+          <div class="squad-project"><span class="project-glyph">⌘</span><span><small data-en="PRODUCT BRIEF" data-ar="موجز المنتج">PRODUCT BRIEF</small><b data-en="Build a useful thing, together" data-ar="ابنوا شيئاً مفيداً معاً">Build a useful thing, together</b></span></div>
+          <div class="role-list">
+            <button class="role-row is-selected" type="button" aria-pressed="true" data-role="frontend"><span class="role-code">FE</span><span class="role-name" data-en="Front-end developer" data-ar="مطور الواجهة الأمامية">Front-end developer</span><span class="role-queue-status" data-en="Verified skill needed" data-ar="مهارة موثقة مطلوبة">Verified skill needed</span></button>
+            <button class="role-row" type="button" aria-pressed="false" data-role="backend"><span class="role-code">BE</span><span class="role-name" data-en="Back-end developer" data-ar="مطور الواجهة الخلفية">Back-end developer</span><span class="role-queue-status" data-en="Verified skill needed" data-ar="مهارة موثقة مطلوبة">Verified skill needed</span></button>
+            <button class="role-row" type="button" aria-pressed="false" data-role="design"><span class="role-code">UX</span><span class="role-name" data-en="UI/UX designer" data-ar="مصمم واجهات وتجربة">UI/UX designer</span><span class="role-queue-status" data-en="Verified skill needed" data-ar="مهارة موثقة مطلوبة">Verified skill needed</span></button>
+            <button class="role-row" type="button" aria-pressed="false" data-role="qa"><span class="role-code">QA</span><span class="role-name" data-en="QA engineer" data-ar="مهندس ضمان الجودة">QA engineer</span><span class="role-queue-status" data-en="Verified skill needed" data-ar="مهارة موثقة مطلوبة">Verified skill needed</span></button>
+            <button class="role-row" type="button" aria-pressed="false" data-role="reviewer"><span class="role-code">PR</span><span class="role-name" data-en="Product / task reviewer" data-ar="مراجع المنتج والمهام">Product / task reviewer</span><span class="role-queue-status" data-en="Verified skill needed" data-ar="مهارة موثقة مطلوبة">Verified skill needed</span></button>
+          </div>
+          <div class="role-detail"><span class="role-detail-label" data-en="ROLE IN THIS SQUAD" data-ar="دورك في الفريق">ROLE IN THIS SQUAD</span><strong id="role-detail-title" data-en="Front-end developer" data-ar="مطور الواجهة الأمامية">Front-end developer</strong><p id="role-detail-copy" data-en="Build the product experience in code and collaborate through reviewed changes." data-ar="ابنِ تجربة المنتج بالكود وتعاون عبر تغييرات تخضع للمراجعة.">Build the product experience in code and collaborate through reviewed changes.</p></div>
+          <div class="squad-ui-foot"><span>⌘</span><span data-en="One active squad per member" data-ar="فريق نشط واحد لكل عضو">One active squad per member</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell challenge-section" id="verification">
+      <div class="section-heading"><div><span class="section-kicker" data-en="SKILL VERIFICATION" data-ar="التحقق من المهارة">SKILL VERIFICATION</span><h2><span data-en="A skill is a claim." data-ar="المهارة ادعاء.">A skill is a claim.</span><span class="heading-muted" data-en="Evidence makes it real." data-ar="والدليل يجعله حقيقة.">Evidence makes it real.</span></h2></div><p data-en="The assessment engine reviews the work against a defined rubric. Every candidate gets the same transparent threshold and attempt rules." data-ar="يفحص محرك التقييم الحل وفق معايير محددة. يحصل كل متدرب على عتبة نجاح وقواعد محاولات واضحة.">The assessment engine reviews the work against a defined rubric. Every candidate gets the same transparent threshold and attempt rules.</p></div>
+      <div class="assessment-layout">
+        <div class="assessment-board">
+          <div class="board-heading"><span data-en="BACK-END / NODE.JS API CHALLENGE" data-ar="تحدي الواجهة الخلفية / Node.js API">BACK-END / NODE.JS API CHALLENGE</span><span class="board-status" data-en="ASSESSMENT RUBRIC" data-ar="معايير التقييم">ASSESSMENT RUBRIC</span></div>
+          <div class="rubric-row"><span class="rubric-code">A</span><span data-en="Code quality" data-ar="جودة الكود">Code quality</span><span class="rubric-track"><i></i><i></i><i></i></span><span class="rubric-state" data-en="CHECK" data-ar="فحص">CHECK</span></div>
+          <div class="rubric-row"><span class="rubric-code">B</span><span data-en="Functionality" data-ar="الوظائف">Functionality</span><span class="rubric-track"><i></i><i></i><i></i></span><span class="rubric-state" data-en="CHECK" data-ar="فحص">CHECK</span></div>
+          <div class="rubric-row"><span class="rubric-code">C</span><span data-en="Basic security" data-ar="الأمان الأساسي">Basic security</span><span class="rubric-track"><i></i><i></i><i></i></span><span class="rubric-state" data-en="CHECK" data-ar="فحص">CHECK</span></div>
+          <div class="assessment-foot"><span data-en="Illustrative rubric · exact criteria depend on the challenge" data-ar="معايير توضيحية · تختلف التفاصيل بحسب التحدي">Illustrative rubric · exact criteria depend on the challenge</span><span>AI + REVIEW</span></div>
+        </div>
+        <div class="assessment-rules"><div class="threshold"><strong>80<span>%</span></strong><span data-en="minimum score<br>to verify a skill" data-ar="الحد الأدنى<br>لتوثيق المهارة">minimum score<br>to verify a skill</span></div><div class="attempt-rule"><div><span class="rule-index">01</span><span data-en="Three attempts for each skill" data-ar="ثلاث محاولات لكل مهارة">Three attempts for each skill</span></div><div><span class="rule-index">02</span><span data-en="After the final attempt: 48-hour cooldown" data-ar="بعد المحاولة الأخيرة: تجميد 48 ساعة">After the final attempt: 48-hour cooldown</span></div><div><span class="rule-index">03</span><span data-en="Verified skills enter the role queue" data-ar="المهارات الموثقة تدخل طابور التخصص">Verified skills enter the role queue</span></div></div></div>
+      </div>
+      <div class="status-flow"><span data-en="Unverified" data-ar="غير موثقة">Unverified</span><i>→</i><span data-en="Assessing" data-ar="قيد التقييم">Assessing</span><i>→</i><span class="flow-verified" data-en="Verified" data-ar="موثقة">Verified</span><span class="flow-or">/</span><span class="flow-failed" data-en="Failed" data-ar="لم تجتز">Failed</span></div>
+    </section>
+
+    <section class="feature-panel-wrap container-xl" id="experience">
+      <div class="feature-panel work-panel">
+        <div class="work-copy"><span class="section-kicker light-kicker" data-en="THE PROJECT" data-ar="المشروع">THE PROJECT</span><h2><span data-en="Not another practice task." data-ar="ليس تمريناً آخر.">Not another practice task.</span><span class="heading-muted-light" data-en="A shared product brief." data-ar="بل موجز منتج مشترك.">A shared product brief.</span></h2><p data-en="Verified squads work through approved, realistic requirements. The project simulates team workflows: task ownership, code submissions, reviews, QA, product decisions, and handoffs." data-ar="تعمل الفرق الموثقة على متطلبات واقعية ومعتمدة. يحاكي المشروع سير فرق العمل: توزيع المهام، وتسليم الكود ومراجعته، وضمان الجودة، وقرارات المنتج، وتسليم المراحل.">Verified squads work through approved, realistic requirements. The project simulates team workflows: task ownership, code submissions, reviews, QA, product decisions, and handoffs.</p>
+          <div class="project-steps"><div><span>01</span><b data-en="Agree the brief" data-ar="اتفقوا على الموجز">Agree the brief</b><small data-en="Reviewer clarifies goals and tasks" data-ar="المراجع يوضح الأهداف والمهام">Reviewer clarifies goals and tasks</small></div><div><span>02</span><b data-en="Ship in your role" data-ar="أنجز ضمن دورك">Ship in your role</b><small data-en="Submit work with traceable evidence" data-ar="سلّم العمل مع دليل قابل للتتبع">Submit work with traceable evidence</small></div><div><span>03</span><b data-en="Review the outcome" data-ar="راجعوا النتيجة">Review the outcome</b><small data-en="Assess the team and each member" data-ar="قيّموا الفريق وكل عضو">Assess the team and each member</small></div></div>
+        </div>
+        <div class="project-ui" aria-label="Example squad task board">
+          <div class="task-window-top"><span class="window-title" data-en="SQUAD WORKSPACE" data-ar="مساحة عمل الفريق">SQUAD WORKSPACE</span><span class="task-window-code">SQUAD / 05</span></div>
+          <div class="task-window-heading"><span class="task-window-mark">S</span><span><small data-en="PRODUCT PROJECT" data-ar="مشروع المنتج">PRODUCT PROJECT</small><b data-en="Local guide experience" data-ar="تجربة دليل محلي">Local guide experience</b></span></div>
+          <div class="task-list"><div><span class="task-check checked">✓</span><span><b data-en="Define review criteria" data-ar="حدد معايير المراجعة">Define review criteria</b><small data-en="Product reviewer · reviewed" data-ar="مراجع المنتج · تمت المراجعة">Product reviewer · reviewed</small></span><i>PR</i></div><div><span class="task-check checked">✓</span><span><b data-en="Map the key user flow" data-ar="ارسم تدفق الاستخدام">Map the key user flow</b><small data-en="UI/UX · evidence attached" data-ar="UI/UX · أُرفق الدليل">UI/UX · evidence attached</small></span><i>UX</i></div><div><span class="task-check">◌</span><span><b data-en="Implement the main view" data-ar="نفذ الشاشة الرئيسية">Implement the main view</b><small data-en="Front-end · in progress" data-ar="الواجهة الأمامية · قيد التنفيذ">Front-end · in progress</small></span><i>FE</i></div><div><span class="task-check">◌</span><span><b data-en="Test API edge cases" data-ar="اختبر حالات API الطرفية">Test API edge cases</b><small data-en="QA · ready to pick up" data-ar="الجودة · جاهزة للاستلام">QA · ready to pick up</small></span><i>QA</i></div></div>
+          <div class="task-window-foot"><span data-en="Illustrative workspace" data-ar="مساحة عمل توضيحية">Illustrative workspace</span><span data-en="Evidence linked to each member" data-ar="الأدلة مرتبطة بكل عضو">Evidence linked to each member</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell evidence-section" id="contribution">
+      <div class="section-heading"><div><span class="section-kicker" data-en="INDIVIDUAL CONTRIBUTION" data-ar="المساهمة الفردية">INDIVIDUAL CONTRIBUTION</span><h2><span data-en="The team builds together." data-ar="الفريق يبني معاً.">The team builds together.</span><span class="heading-muted" data-en="Your record stays yours." data-ar="وسجلّك محفوظ لك.">Your record stays yours.</span></h2></div><p data-en="A project's outcome is shared. Each member's work is assessed separately, so individual effort remains visible even when a squad changes." data-ar="نتيجة المشروع مشتركة، لكن مساهمة كل عضو تُقيّم على حدة، لتظل جهود الفرد واضحة حتى عند تغير الفريق.">A project's outcome is shared. Each member's work is assessed separately, so individual effort remains visible even when a squad changes.</p></div>
+      <div class="evidence-layout">
+        <div class="contribution-record">
+          <div class="record-head"><span><small data-en="CONTRIBUTION RECORD" data-ar="سجل المساهمة">CONTRIBUTION RECORD</small><b data-en="Evidence, attributed." data-ar="أدلة موثقة باسمك.">Evidence, attributed.</b></span><span class="record-stamp">SF<br><small data-en="FINAL" data-ar="نهائي">FINAL</small></span></div>
+          <div class="record-meta"><span class="record-avatar">UX</span><span><b data-en="Squad member" data-ar="عضو الفريق">Squad member</b><small data-en="UI/UX designer · individual review" data-ar="مصمم UI/UX · تقييم فردي">UI/UX designer · individual review</small></span></div>
+          <div class="evidence-lines"><div><span>✓</span><b data-en="Delivered design system foundations" data-ar="أنجز أسس نظام التصميم">Delivered design system foundations</b><small data-en="Design evidence" data-ar="دليل التصميم">Design evidence</small></div><div><span>✓</span><b data-en="Mapped onboarding flow and states" data-ar="رسم تدفق بدء الاستخدام وحالاته">Mapped onboarding flow and states</b><small data-en="Reviewed output" data-ar="مخرج تمت مراجعته">Reviewed output</small></div><div><span>✓</span><b data-en="Contributed across project handoffs" data-ar="ساهم خلال مراحل التسليم">Contributed across project handoffs</b><small data-en="Activity log" data-ar="سجل النشاط">Activity log</small></div></div>
+          <div class="record-lock"><span>◈</span><span data-en="Issued at completion · immutable after creation" data-ar="يصدر عند الاكتمال · لا يعدل بعد إنشائه">Issued at completion · immutable after creation</span></div>
+        </div>
+        <div class="care-rules"><div class="care-title"><span class="section-kicker light-kicker" data-en="WHEN A MEMBER STALLS" data-ar="عند تعثر أحد الأعضاء">WHEN A MEMBER STALLS</span><h3 data-en="Protect the work.<br>Be fair to the team." data-ar="احمِ العمل.<br>وأنصف الفريق.">Protect the work.<br>Be fair to the team.</h3></div><div class="care-timeline"><div><b>72<span>h</span></b><p data-en="No activity for more than 72 hours marks a member Inactive." data-ar="انقطاع النشاط لأكثر من 72 ساعة يحول حالة العضو إلى غير نشط.">No activity for more than 72 hours marks a member Inactive.</p></div><div><b>↻</b><p data-en="Their tasks can be paused or reassigned so the squad can move forward." data-ar="يمكن تجميد مهامه أو إعادة تكليفها ليواصل الفريق العمل.">Their tasks can be paused or reassigned so the squad can move forward.</p></div><div><b>✓</b><p data-en="Other members' work and individual records are not penalized." data-ar="لا تتأثر أعمال بقية الأعضاء وسجلاتهم الفردية.">Other members' work and individual records are not penalized.</p></div></div></div>
+      </div>
+      <div class="review-basis"><span class="review-basis-title" data-en="INDIVIDUAL REVIEW IS BASED ON" data-ar="يعتمد التقييم الفردي على">INDIVIDUAL REVIEW IS BASED ON</span><span data-en="Pull requests" data-ar="طلبات الدمج">Pull requests</span><i></i><span data-en="Code reviews" data-ar="مراجعات الكود">Code reviews</span><i></i><span data-en="Activity history" data-ar="سجل النشاط">Activity history</span><i></i><span data-en="Verified evidence" data-ar="أدلة موثقة">Verified evidence</span></div>
+    </section>
+
+    <section class="audiences-wrap container-xl" id="people">
+      <div class="audiences-panel">
+        <div class="section-heading"><div><span class="section-kicker light-kicker" data-en="MADE FOR THE PEOPLE WHO SHIP" data-ar="لمن ينجزون العمل">MADE FOR THE PEOPLE WHO SHIP</span><h2><span data-en="Different roles." data-ar="أدوار مختلفة.">Different roles.</span><span class="heading-muted-light" data-en="Shared standards." data-ar="ومعايير واحدة.">Shared standards.</span></h2></div><p data-en="A practical bridge between early-career builders, expert reviewers, and the people with meaningful product challenges." data-ar="جسر عملي بين الممارسين في بداية مسيرتهم والمراجعين الخبراء وأصحاب تحديات المنتجات المفيدة.">A practical bridge between early-career builders, expert reviewers, and the people with meaningful product challenges.</p></div>
+          <div class="audience-grid"><article><span class="audience-number">BUILDERS</span><h3 data-en="Trainees & practitioners" data-ar="المتدربون والممارسون">Trainees & practitioners</h3><p data-en="Verify a discipline, practice team delivery, and show an employer or idea owner the evidence behind your skills." data-ar="وثّق تخصصك، وتمرن على إنجاز العمل ضمن فريق، وأظهر لصاحب العمل أو الفكرة دليلاً على مهاراتك.">Verify a discipline, practice team delivery, and show an employer or idea owner the evidence behind your skills.</p></article><article><span class="audience-number">REVIEWERS</span><h3 data-en="Reviewers & experts" data-ar="المراجعون والخبراء">Reviewers & experts</h3><p data-en="Shape useful challenges, review individual work, assess squad outcomes, and give grounded feedback." data-ar="صمموا تحديات مفيدة، وراجعوا أعمال الأفراد، وقيّموا نتائج الفرق، وقدّموا ملاحظات عملية.">Shape useful challenges, review individual work, assess squad outcomes, and give grounded feedback.</p></article><article><span class="audience-number">PARTNERS</span><h3 data-en="Idea owners & companies" data-ar="أصحاب الأفكار والشركات">Idea owners & companies</h3><p data-en="Bring realistic requirements or request a squad with verified skills, then review work through documented evidence. Squads are learning environments, not a contract agency." data-ar="قدموا متطلبات واقعية أو اطلبوا فريقاً بمهارات موثقة، وراجعوا العمل عبر أدلة واضحة. الفرق بيئات تعلم وليست وكالة تنفيذ تعاقدية.">Bring realistic requirements or request a squad with verified skills, then review work through documented evidence. Squads are learning environments, not a contract agency.</p></article><article><span class="audience-number">PLATFORM</span><h3 data-en="Platform admins" data-ar="مديرو المنصة">Platform admins</h3><p data-en="Maintain disciplines, approve reviewers, manage role queues, and oversee squad formation." data-ar="يتولون إدارة التخصصات واعتماد المراجعين وطوابير الأدوار وتشكيل الفرق.">Maintain disciplines, approve reviewers, manage role queues, and oversee squad formation.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section-shell boundaries-section">
+      <div class="boundary-copy"><span class="section-kicker" data-en="A CLEAR PROMISE" data-ar="وعد واضح">A CLEAR PROMISE</span><h2><span data-en="Built for proof." data-ar="مصممة للإثبات.">Built for proof.</span><span class="heading-muted" data-en="Honest about scope." data-ar="واضحة في حدودها.">Honest about scope.</span></h2><p data-en="SquadFolio helps you demonstrate readiness through applied work. It doesn't pretend to be the thing that comes after." data-ar="تساعدك SquadFolio على إظهار جاهزيتك من خلال العمل التطبيقي، ولا تدعي أنها الخطوة التي تليه.">SquadFolio helps you demonstrate readiness through applied work. It doesn't pretend to be the thing that comes after.</p></div>
+      <div class="boundary-grid"><div class="boundary-in"><h3><span>✓</span><span data-en="What you can expect" data-ar="ما الذي تقدمه المنصة">What you can expect</span></h3><ul><li data-en="Practical skill challenges" data-ar="تحديات مهارات عملية">Practical skill challenges</li><li data-en="Verified cross-disciplinary squads" data-ar="فرق متعددة التخصصات وموثقة">Verified cross-disciplinary squads</li><li data-en="Realistic product work and reviews" data-ar="عمل منتجي واقعي ومراجعات">Realistic product work and reviews</li><li data-en="Individual evidence and contribution records" data-ar="أدلة فردية وسجلات مساهمة">Individual evidence and contribution records</li></ul></div><div class="boundary-out"><h3><span>—</span><span data-en="What it is not" data-ar="ما لا تقدمه المنصة">What it is not</span></h3><ul><li data-en="A job board or job guarantee" data-ar="منصة وظائف أو ضمان توظيف">A job board or job guarantee</li><li data-en="A commercial software agency" data-ar="وكالة برمجية تجارية">A commercial software agency</li><li data-en="An instant team-on-signup service" data-ar="تشكيل فوري للفريق عند التسجيل">An instant team-on-signup service</li><li data-en="A beginner LMS or accredited certification" data-ar="منصة تعليم من الصفر أو شهادة أكاديمية">A beginner LMS or accredited certification</li><li data-en="A marketplace for selling student services" data-ar="سوق لبيع خدمات الطلاب">A marketplace for selling student services</li></ul></div></div>
+    </section>
+
+    <section class="tech-wrap container-xl" id="blueprint">
+      <div class="tech-panel"><div class="section-heading"><div><span class="section-kicker light-kicker" data-en="PRODUCT FOUNDATIONS" data-ar="أسس المنتج">PRODUCT FOUNDATIONS</span><h2><span data-en="Clear rules." data-ar="قواعد واضحة.">Clear rules.</span><span class="heading-muted-light" data-en="A modular core." data-ar="ونواة معيارية.">A modular core.</span></h2></div><p data-en="The product follows a modular monolith with clean boundaries: domain rules stay independent, use cases orchestrate work, and infrastructure handles storage and external evaluators." data-ar="يتبع المنتج بنية أحادية معيارية بحدود واضحة: تبقى قواعد المجال مستقلة، وتنسق حالات الاستخدام العمل، وتتولى البنية التحتية التخزين والمقيّمين الخارجيين.">The product follows a modular monolith with clean boundaries: domain rules stay independent, use cases orchestrate work, and infrastructure handles storage and external evaluators.</p></div>
+        <div class="layer-grid"><article><span>01</span><b>domain</b><p data-en="Entities, value objects, and invariants. No framework or external service dependencies." data-ar="الكيانات والقيم والقواعد الحاكمة، بلا اعتماد على أطر أو خدمات خارجية.">Entities, value objects, and invariants. No framework or external service dependencies.</p></article><article><span>02</span><b>use_cases</b><p data-en="Verify skills, form squads, submit squad tasks, and generate contribution records." data-ar="توثيق المهارات، وتشكيل الفرق، وتسليم المهام، وإصدار سجلات المساهمة.">Verify skills, form squads, submit squad tasks, and generate contribution records.</p></article><article><span>03</span><b>infrastructure</b><p data-en="Repositories for persistence and adapters for skill evaluation." data-ar="مستودعات التخزين ومحولات تقييم المهارات.">Repositories for persistence and adapters for skill evaluation.</p></article><article><span>04</span><b>interfaces</b><p data-en="Web API controllers and command-line entry points." data-ar="متحكمات واجهة الويب ونقاط تشغيل سطر الأوامر.">Web API controllers and command-line entry points.</p></article></div>
+        <div class="invariant-strip"><span class="invariant-label" data-en="DOMAIN INVARIANTS" data-ar="قواعد المجال">DOMAIN INVARIANTS</span><span data-en="One active squad per member" data-ar="فريق نشط واحد لكل عضو">One active squad per member</span><span data-en="No assessment without attempts remaining" data-ar="لا تقييم دون محاولات متبقية">No assessment without attempts remaining</span><span data-en="Contribution evidence is immutable" data-ar="دليل المساهمة غير قابل للتعديل">Contribution evidence is immutable</span><span data-en="All five roles required to form a squad" data-ar="يلزم توفر الأدوار الخمسة لتشكيل الفريق">All five roles required to form a squad</span></div>
+        <div class="use-case-strip"><span data-en="REFERENCE IMPLEMENTATION" data-ar="التنفيذ المرجعي">REFERENCE IMPLEMENTATION</span><code>VerifySkillUseCase</code><code>FormSquadUseCase</code><code>SubmitSquadTaskUseCase</code><code>GenerateContributionRecordUseCase</code><small data-en="Context baseline: 7 / 7 unit and integration checks reported passing" data-ar="الوارد في الوثيقة: اجتياز 7 من 7 اختبارات وحدة وتكامل">Context baseline: 7 / 7 unit and integration checks reported passing</small></div>
+        <details class="data-model"><summary><span data-en="Explore the domain model and record fields" data-ar="استكشف نموذج المجال وحقول السجلات">Explore the domain model and record fields</span><span class="summary-mark">+</span></summary><div class="entity-grid"><article><b>USER</b><p>uuid id · string full_name · email · github_username</p></article><article><b>SKILL_CLAIM</b><p>uuid id · user_id · skill_title · verification_status · int remaining_attempts</p><small>Unverified / Assessing / Verified / Failed</small></article><article><b>VERIFICATION_ASSESSMENT</b><p>uuid id · skill_claim_id · float automated_score · boolean passed · json rubric_feedback</p></article><article><b>SQUAD</b><p>uuid id · project_title · status · datetime formed_at</p><small>Forming / Active / Completed / Disbanded</small></article><article><b>SQUAD_MEMBER</b><p>uuid id · squad_id · user_id · assigned_role · boolean is_active</p></article><article><b>SQUAD_TASK_SUBMISSION</b><p>uuid id · squad_id · member_user_id · task_title · pr_url · float score</p></article><article><b>CONTRIBUTION_RECORD</b><p>uuid id · user_id · squad_id · role · float total_individual_score · json verified_evidences</p></article></div><p class="relationship-note" data-en="Relationships: a user owns skill claims and contribution records; squads contain members; squad members produce task submissions and contribution evidence." data-ar="العلاقات: يملك المستخدم ادعاءات المهارات وسجلات المساهمة؛ وتضم الفرق أعضاء؛ وينتج العضو التسليمات وأدلة المساهمة.">Relationships: a user owns skill claims and contribution records; squads contain members; squad members produce task submissions and contribution evidence.</p></details>
+      </div>
+    </section>
+
+    <section class="faq-section section-shell" id="faq">
+      <div class="faq-intro"><span class="section-kicker" data-en="DETAILS THAT MATTER" data-ar="تفاصيل مهمة">DETAILS THAT MATTER</span><h2><span data-en="The ground rules." data-ar="قواعد العمل.">The ground rules.</span><span class="heading-muted" data-en="In plain language." data-ar="بكلام واضح.">In plain language.</span></h2><p data-en="An honest platform should be clear about how it works." data-ar="المنصة الصادقة توضح طريقة عملها.">An honest platform should be clear about how it works.</p></div>
+      <div class="faq-list" id="faq-list">
+        <article class="faq-item is-open"><h3><button class="faq-question" type="button" aria-expanded="true" aria-controls="answer-one"><span data-en="What happens when I pass a skill assessment?" data-ar="ماذا يحدث عند اجتياز تقييم المهارة؟">What happens when I pass a skill assessment?</span><span class="faq-icon" aria-hidden="true">−</span></button></h3><div class="faq-answer" id="answer-one"><p data-en="At 80% or higher, the claim becomes Verified and you can join the queue for that role. You get three attempts per skill; after using them, the claim is frozen for 48 hours." data-ar="عند تحقيق 80% أو أكثر تصبح المهارة موثقة ويمكنك دخول طابور تخصصها. لديك ثلاث محاولات لكل مهارة؛ وبعد استنفادها يتجمد الادعاء 48 ساعة.">At 80% or higher, the claim becomes Verified and you can join the queue for that role. You get three attempts per skill; after using them, the claim is frozen for 48 hours.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-two"><span data-en="When does a squad become active?" data-ar="متى يصبح الفريق نشطاً؟">When does a squad become active?</span><span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="answer-two" hidden><p data-en="Verified people join role queues. A squad is formed when all five roles are ready: Front-end, Back-end, UI/UX, QA, and Product Reviewer. A member cannot be in more than one active squad." data-ar="ينضم الموثقون إلى طوابير تخصصاتهم. يتشكل الفريق عند توفر الأدوار الخمسة: الواجهة الأمامية والخلفية وUI/UX وضمان الجودة ومراجع المنتج. ولا ينضم العضو لأكثر من فريق نشط.">Verified people join role queues. A squad is formed when all five roles are ready: Front-end, Back-end, UI/UX, QA, and Product Reviewer. A member cannot be in more than one active squad.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-three"><span data-en="How is individual contribution assessed?" data-ar="كيف تُقيّم المساهمة الفردية؟">How is individual contribution assessed?</span><span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="answer-three" hidden><p data-en="Each member is assessed separately using pull requests, code reviews, activity history, and submitted evidence. The contribution record is immutable once generated." data-ar="يُقيّم كل عضو على حدة بالاستناد إلى طلبات الدمج ومراجعات الكود وسجل النشاط والأدلة المقدمة. ولا يمكن تعديل سجل المساهمة بعد إنشائه.">Each member is assessed separately using pull requests, code reviews, activity history, and submitted evidence. The contribution record is immutable once generated.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-four"><span data-en="What if a teammate stops participating?" data-ar="ماذا لو توقف أحد أعضاء الفريق؟">What if a teammate stops participating?</span><span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="answer-four" hidden><p data-en="After more than 72 hours without activity, a member becomes Inactive. Their tasks may be paused or reassigned; the rest of the squad's evaluation remains independent." data-ar="بعد أكثر من 72 ساعة بلا نشاط تصبح حالة العضو غير نشط. يمكن تجميد مهامه أو إعادة تكليفها، مع بقاء تقييم بقية الفريق مستقلاً.">After more than 72 hours without activity, a member becomes Inactive. Their tasks may be paused or reassigned; the rest of the squad's evaluation remains independent.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-five"><span data-en="Is SquadFolio a job board, course, or agency?" data-ar="هل SquadFolio منصة وظائف أو دورة أو وكالة؟">Is SquadFolio a job board, course, or agency?</span><span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="answer-five" hidden><p data-en="No. It is not a job board, a job guarantee, a beginner LMS, an accredited certification system, a student marketplace, or a commercial software agency." data-ar="لا. ليست منصة وظائف ولا ضمان توظيف ولا منصة تعليم من الصفر أو شهادات أكاديمية أو سوق خدمات طلابية أو وكالة برمجية تجارية.">No. It is not a job board, a job guarantee, a beginner LMS, an accredited certification system, a student marketplace, or a commercial software agency.</p></div></article>
+      </div>
+    </section>
+
+    <section class="final-wrap container-xl" id="waitlist-final"><div class="final-panel"><div class="final-copy"><span class="section-kicker light-kicker" data-en="YOUR WORK CAN SPEAK CLEARLY" data-ar="دع عملك يتحدث بوضوح">YOUR WORK CAN SPEAK CLEARLY</span><h2><span data-en="Make your next" data-ar="اجعل خطوتك">Make your next</span><span data-en="step a real one." data-ar="القادمة ملموسة.">step a real one.</span></h2><p data-en="Start with what you know. Leave with something you can show." data-ar="ابدأ بما تعرف، وأنهِ بشيء تستطيع عرضه.">Start with what you know. Leave with something you can show.</p></div><a class="final-cta" href="#waitlist"><span data-en="Join the waitlist" data-ar="انضم إلى قائمة الانتظار">Join the waitlist</span><span>↗</span></a><img src="assets/mascot-cutout.png" alt="" class="final-mascot"></div></section>
   </main>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/main.js"></script>
+  <footer class="site-footer"><div class="container-xl footer-inner"><a class="brand-lockup" href="#top" aria-label="SquadFolio home"><img src="assets/wordmark-original.png" alt="SquadFolio" class="brand-wordmark"></a><button class="language-toggle footer-language" type="button" aria-label="Switch language">عربي</button><span class="copyright">© 2026 SQUADFOLIO</span></div></footer>
+  <script src="https://code.jquery.com/jquery-4.1.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
